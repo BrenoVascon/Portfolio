@@ -7,9 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-background": "url('./public/background.jpg')",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        // Defina suas cores personalizadas aqui
+        primary: "#03235E", // Cor primária (exemplo)
+        secondary: "#BF439C", // Cor secundária (exemplo)
+      },
+      screens: {
+        xl2: "1600px", // Definindo um breakpoint para telas maiores que 1600px
       },
     },
   },
