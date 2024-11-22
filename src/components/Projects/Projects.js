@@ -21,7 +21,7 @@ const projects = [
   {
     title: "Projeto Clone",
     image: "/Clone-site-pixelperfect.png",
-    description: "Clone de site seguindo todos os pixels referente ao Figma.",
+    description: "Clone de site seguindo todos os pixels referente ao Figma",
     link: "https://github.com/BrenoVascon/teste-front-end-jr",
   },
   {
