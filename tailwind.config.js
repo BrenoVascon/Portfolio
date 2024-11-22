@@ -16,6 +16,7 @@ module.exports = {
         secondary: "#BF439C", // Cor secundária (exemplo)
       },
       screens: {
+        xl1: "1400px", // Definindo um breakpoint para telas maiores que 1400px
         xl2: "1600px", // Definindo um breakpoint para telas maiores que 1600px
       },
     },

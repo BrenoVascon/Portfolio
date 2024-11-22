@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-// Importe os ícones necessários
+
 import { FaJs, FaReact, FaGitAlt, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import {
   SiTypescript,
@@ -10,7 +10,7 @@ import {
   SiSass,
   SiTailwindcss,
   SiStyledcomponents,
-  SiHive, // Representa o ERP
+  SiHive,
 } from "react-icons/si";
 
 const skills = [
@@ -36,7 +36,7 @@ export default function Skills() {
           Minhas <span className="text-secondary">Habilidades</span>
         </h2>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 px-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 ; gap-8 px-4 xl1:pl-24">
         {skills.map((skill, index) => (
           <div
             key={index}
