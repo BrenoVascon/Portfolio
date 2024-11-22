@@ -12,7 +12,7 @@ export default function About() {
         </h2>
         <p className="mt-4 text-lg text-primary font-semibold">
           Apaixonado por desenvolvimento de software e sempre buscando novos
-          desafios.
+          desafios.<br></br>Sou de São Paulo, Mauá e tenho 23 anos!
         </p>
         <div className="mt-6 text-base">
           <p className="text-primary font-medium ">

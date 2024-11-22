@@ -5,42 +5,31 @@ import { useState, useEffect, useRef } from "react";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false); // Estado para verificar se a página foi rolada
+  const [isScrolled, setIsScrolled] = useState(false);
   const modalRef = useRef(null);
 
   const handleMenuToggle = () => {
-    setIsMenuOpen(true);
     setIsModalVisible(true);
+    setTimeout(() => {
+      setIsMenuOpen(true);
+    }, 100);
   };
 
   const handleCloseModal = () => {
     setIsMenuOpen(false);
+    setTimeout(() => {
+      setIsModalVisible(false);
+    }, 500);
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true); // Ativa o fundo quando rolar mais de 50px
-      } else {
-        setIsScrolled(false); // Desativa o fundo quando voltar para o topo
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Limpeza do evento ao desmontar o componente
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  useEffect(() => {
-    if (!isMenuOpen) {
-      setTimeout(() => {
-        setIsModalVisible(false);
-      }, 500); // Delay para esconder o modal após a animação de fechamento
-    }
-  }, [isMenuOpen]);
 
   return (
     <nav
@@ -93,10 +82,10 @@ export default function Navbar() {
         {isModalVisible && (
           <div
             ref={modalRef}
-            className={`fixed inset-0 bg-white flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${
+            className={`fixed inset-0 bg-white flex flex-col items-center justify-center transition-transform duration-500 ease-in-out transform ${
               isMenuOpen
-                ? "opacity-100 translate-y-0" // Quando o menu está aberto
-                : "opacity-0 translate-y-full" // Quando o menu está fechado
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-full"
             }`}
           >
             <button

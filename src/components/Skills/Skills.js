@@ -25,6 +25,7 @@ const skills = [
   { name: "Tailwind CSS", icon: <SiTailwindcss /> },
   { name: "Styled Components", icon: <SiStyledcomponents /> },
   { name: "ERP", icon: <SiHive /> },
+  { name: "React Native", icon: <FaReact /> },
 ];
 
 export default function Skills() {
