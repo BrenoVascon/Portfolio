@@ -26,15 +26,6 @@ export default function Hero() {
             Fale comigo
           </button>
         </a>
-        <a href="#projects">
-          <button className="bg-primary text-white font-bold py-4 px-4 rounded-full mr-1 mt-4 transition-transform transform hover:scale-95">
-            {" "}
-            <FaLocationArrow />{" "}
-          </button>
-        </a>
-        <span className=" mt-4 text-black font-semibold text-sm flex items-center">
-          Veja meus Projetos!
-        </span>
       </div>
     </div>
   );
