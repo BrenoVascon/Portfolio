@@ -25,8 +25,10 @@ const projects = [
     link: "https://github.com/BrenoVascon/teste-front-end-jr",
   },
   {
-    title: "Em breve...",
-    description: "Em breve...",
+    title: "Gerador de Senhas Aleatórias ",
+    image: "/generator.png",
+    description: " Aplicativo Gerador de Senhas Aleatórias ",
+    link: "https://github.com/BrenoVascon/App-ReactNative",
   },
   {
     title: "Em breve...",
